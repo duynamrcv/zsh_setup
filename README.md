@@ -19,6 +19,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ```
 Add to `~/.zshrc`:
 ```
+# for setting history
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=2000
+setopt EXTENDED_HISTORY
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
 
