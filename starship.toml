@@ -1,0 +1,70 @@
+format = """
+$username$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character
+"""
+
+# Set the timeout for command execution
+command_timeout=2000
+
+# User + hostname + directory
+[username]
+style_user = 'fg:cyan bold'
+style_root = 'fg:red'
+format='[$user]($style)'
+show_always = true
+disabled = false
+
+[hostname]
+ssh_only = false
+format = '[$hostname](cyan)'
+disabled = false
+
+[directory]
+style = 'fg:yellow bold'
+format = '[ \[ $path \]]($style) '
+
+# Version control system
+[git_branch]
+symbol = ''
+style = 'green'
+format = 'on [$symbol]($style) [$branch]($style bold) '
+
+[git_status]
+disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "red bold"
+stashed = '\$${count}'
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕${count}"
+conflicted = "=${count}"
+deleted = "✘${count}"
+renamed = "»${count}"
+modified = "!${count}"
+staged = "+${count}"
+untracked = "?${count}"
+
+[custom.opentofu]
+symbol = ''
+description = 'OpenTofu version'
+style = 'fg:#fce307'
+format = 'via [$symbol]($style) [$output]($style bold) '
+detect_folders = ['.tofu']
+shell = '/bin/bash'
+command = 'echo -n $(tofu version 2>/dev/null | grep OpenTofu | grep -oP "v\K[0-9.]+")'
+
+[custom.ansible]
+symbol = '󱂚'
+description = 'Ansible Core version'
+detect_files = ['ansible.cfg']
+style = 'red'
+format = 'via [$symbol]($style) [$output]($style bold) '
+shell = '/bin/bash'
+command = 'echo -n $(ansible --version 2>/dev/null | grep -oP "(?<=core )[\d\.]+")'
+
+# User input
+[line_break]
+disabled = false
