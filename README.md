@@ -5,7 +5,7 @@ Install `zsh` and set as default
 sudo apt install zsh 
 chsh -s $(which zsh)
 ```
-Make sure to logout and sign in again to complete the setup. At this time, the `zsh` is used as default. To back the `bash` manually, type
+Make sure to log out and sign in again to complete the setup. At this time, the `zsh` is used as default. To back the `bash` manually, type
 ```
 bash
 ```
@@ -52,7 +52,7 @@ sudo apt-get update
 sudo apt-get install font-manager
 ```
 Add `MesloLGS Nerd Font` to the font type in `Terminal`, and/or `VScode`.
-The fully configuration is descired in [here](https://starship.rs/guide/)
+The full configuration is descired in [here](https://starship.rs/guide/)
 ### Install and Config Starship
 Install the latest version for your system:
 ```
