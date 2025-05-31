@@ -55,6 +55,13 @@ Add to `~/.zshrc`:
 ```
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
+
+## [Eza](https://github.com/eza-community/eza)
+This package is a modern alternative for the venerable file-listing command-line program `ls` that ships with Unix and Linux operating systems, giving it more features and better defaults
+```
+sudo apt install -y eza
+```
+
 ## [Starship](https://starship.rs/guide/)
 The minimal, blazing-fast, and infinitely customizable prompt for any shell. To use full symbol, install [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip) and add to [font manager](https://github.com/FontManager/font-manager).
 ### Install Font manager:

@@ -23,6 +23,11 @@ echo "Install font manager"
 sudo add-apt-repository ppa:font-manager/staging
 sudo apt-get update
 sudo apt-get install font-manager
+mkdir nerd
+cd nerd
+curl https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
+unzip Meslo.zip
+cd -
 
 echo "Install starship"
 curl -sS https://starship.rs/install.sh | sh
